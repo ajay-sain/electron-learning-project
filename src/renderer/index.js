@@ -3,6 +3,8 @@ import { LitElement, html, css } from 'lit';
 import './components/main-container';
 import './components/app-header';
 
+// import './handlers.js'
+
 export class FileManager extends LitElement {
   static styles = css`
     .app-container {
@@ -11,6 +13,7 @@ export class FileManager extends LitElement {
       height: 100vh;
     }
   `;
+
   constructor() {
     super();
     // this.currentDir = os.homedir();
