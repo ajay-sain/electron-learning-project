@@ -1,4 +1,5 @@
 import { LitElement, html, css } from 'lit';
+// import os from window.fileManager.os;
 
 import './components/main-container';
 import './components/app-header';
@@ -16,8 +17,8 @@ export class FileManager extends LitElement {
 
   constructor() {
     super();
-    // this.currentDir = os.homedir();
-    // console.log('Current Directory:', this.currentDir);
+    // this.currentDir = window;
+    // console.log('Current Directory:',window.fileManager.homedir);
   }
   render() {
     return html`

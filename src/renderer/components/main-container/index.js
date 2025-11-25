@@ -31,7 +31,13 @@ export class MainContainer extends LitElement {
     `;
     constructor() {
         super();
+        // this.dir = window.fileManager.getDirContent(window.fileManager.homedir)
+        // console.log("window.fileManager.currentDir", window.fileManager)
+        // window.fileManager.dirs(window.fileManager.currentDir)
+        // .then( content => console.log(content))
+        // console.log();
     }
+
     render() {
         return html`
         <div class="main-container">
@@ -39,8 +45,8 @@ export class MainContainer extends LitElement {
             <div class="main-content">
                 <br/>
                 <path-breadcrumb></path-breadcrumb>
-                <folders-section></folders-section>
-                <file-section></file-section>
+                <folders-section folders=${window.fileManager.dirs}></folders-section>
+                <file-section files=${window.fileManager.files}></file-section>
             </div>
         </div>
         `;
